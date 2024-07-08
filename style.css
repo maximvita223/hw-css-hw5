@@ -9,8 +9,8 @@
   background-color: black;
   height: 75px;
   justify-content: space-between;
-  padding-left: 240px;
-  padding-right: 240px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .navigation__left {
   display: flex;
@@ -28,7 +28,7 @@
   background-color: #F1E4E6;
 }
 .head__img {
-  width: 50%;
+  width: 100%;
 }
 .head__content {
   border-left: 12px solid #F16D7F;
@@ -169,4 +169,32 @@
   line-height: 19.2px;
   text-align: left;
   color: #F16D7F;
+}
+
+@media (width: 768px) {
+  .head__left {
+    max-width: 50%;
+  }
+  .head__title {
+    font-size: 44px;
+  }
+  .head__heading {
+    font-size: 24px;
+  }
+  .menu {
+    margin-left: 16px;
+    margin-right: 16px;
+    gap: 20px;
+  }
+  .menu__item_big {
+    min-height: 0;
+  }
+  .content {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .content__block {
+    grid-template-columns: repeat(2, 3fr);
+    gap: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
