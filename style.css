@@ -374,6 +374,23 @@ a {
 }
 
 @media (width: 768px) {
+  .footer__info {
+    flex-direction: column;
+    gap: 108px;
+  }
+  .feedback {
+    flex-direction: column;
+    gap: 48px;
+    height: 614px;
+    justify-content: center;
+    background-size: cover;
+  }
+  .feedback__left {
+    width: 360px;
+  }
+  .feedback__right {
+    width: 360px;
+  }
   .head__left {
     max-width: 50%;
   }
@@ -403,25 +420,6 @@ a {
     gap: 16px;
   }
 }
-.footer__info {
-  flex-direction: column;
-  gap: 108px;
-}
-
-.feedback {
-  flex-direction: column;
-  gap: 48px;
-  height: 614px;
-  justify-content: center;
-  background-size: cover;
-}
-.feedback__left {
-  width: 360px;
-}
-.feedback__right {
-  width: 360px;
-}
-
 .bottom {
   gap: 305px;
   padding-left: 32px;

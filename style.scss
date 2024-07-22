@@ -400,6 +400,26 @@ a{
     }
 
 @media(width:768px){
+    .footer{
+        &__info{
+            flex-direction: column;
+            gap: 108px;
+            
+        }
+    }
+    .feedback{
+        flex-direction: column;
+        gap: 48px;
+        height: 614px;
+        justify-content: center;
+        background-size: cover;
+        &__left{
+            width: 360px;
+        }
+        &__right{
+            width: 360px;
+        }
+    }
     .head{
         &__left{
             max-width: 50%;
@@ -431,26 +451,7 @@ a{
         }
     }
     }
-    .footer{
-        &__info{
-            flex-direction: column;
-            gap: 108px;
-            
-        }
-    }
-    .feedback{
-        flex-direction: column;
-        gap: 48px;
-        height: 614px;
-        justify-content: center;
-        background-size: cover;
-        &__left{
-            width: 360px;
-        }
-        &__right{
-            width: 360px;
-        }
-    }
+    
     .bottom{
         gap: 305px;
         padding-left: 32px;
