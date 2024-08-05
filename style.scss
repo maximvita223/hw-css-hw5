@@ -184,10 +184,15 @@ a{
         color: $colorSite;
         background-color: white;
         border-color: $colorSite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 23px;
     }
     &__button_browse_all:hover{
         color: white;
         background-color: $colorSite;
+        fill: white;
     }
     &__card{
         background-color: #F8F8F8;
@@ -212,7 +217,6 @@ a{
         font-size: 14px;
         font-weight: 400;
         line-height: 16.8px;
-        text-align: left;
 
         color: $colorText;
 
@@ -252,6 +256,7 @@ a{
         padding-left: 230px;
         padding-right: 230px;
         gap: 30px;
+        justify-content: center;
     }
     &__header{
         color:#FBFBFB;
@@ -280,8 +285,8 @@ a{
     }
     &__img{
         max-width: 40px;
-        position: absolute;
-        bottom: 110px;
+        max-height: 32px;
+
     }
     &__block_txt{
         text-align: center;
@@ -298,6 +303,9 @@ a{
     padding-left: 230px;
     padding-right: 230px;
     gap: 220px;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &__left{
         display: flex;
@@ -365,7 +373,7 @@ a{
         width: 100px;
     }
 }
-    .bottom{
+.bottom{
         display: flex;
         background-color: black;
         justify-content: space-between;
@@ -373,6 +381,7 @@ a{
         padding: 30px; 
         padding-left: 230px;
         padding-right: 230px;
+        
         &__right{
             display: flex;
             gap: 8px;
@@ -398,10 +407,13 @@ a{
             color: white;
             background-color: $colorSite;
         }
+        
         &__img{
             max-width: 50%;
         }
-    }
+
+}
+
 
     .filter{
     width: 100%;
@@ -481,6 +493,12 @@ a{
         display: flex;
         align-items: center;
         gap: 10px;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.8px;
+        color: #6F6E6E;
+
     }
     &__content{
         position: absolute;
@@ -528,6 +546,140 @@ a{
 
     }
 }
+
+.bottom{
+    gap: 305px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.catalog{
+    display: flex;
+    background-color: #F8F3F4;
+    align-items: center;
+    height: 150px;
+    justify-content: space-between;
+    padding-left: 230px;
+    padding-right: 230px;
+    
+    &__header{
+        color: $colorSite;
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28.8px;
+        text-align: left;
+
+    }
+   
+    &__chapter_text{
+        text-decoration: none;
+        color: #636363;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.8px;
+        text-align: left;
+
+    }
+    &__now{
+        color: $colorSite;
+    }
+}
+.product{
+    &__photo{
+        display: flex;
+        background-color: #F7F7F7;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    margin-bottom: 665px;
+        &__slide{
+        background-color: #2A2A2A26;
+        }
+    }
+    &__info{
+        margin-left: calc(50% - 540px);
+        margin-right: calc(50% - 540px);
+        background-color: #FFFFFF;
+        position: absolute;
+        bottom: 1px;
+        top: 900px;
+        height: 677px;
+        border-width: 1px;
+        border-color: #EAEAEA;
+        border-style: solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 293px;
+        padding-right: 293px;
+        padding-top: 65px;
+    }
+    &__parametr{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        border-top: 2px solid black;
+        width: 642px;
+        padding-top: 60px;
+    }
+    &__h3{
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.8px;
+        color: $colorSite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 0px;
+
+    }
+    &__h2{
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.6px;
+
+
+    }
+    &__h1{
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28.8px;
+        color: $colorSite;
+
+    }
+    &__p{
+        width: 570px;
+        padding-bottom: 45px;
+    }
+    &__line{
+        border-top: 3px $colorSite solid;
+        width: 63px;
+    }
+    &__head{
+        padding-bottom: 45px;
+    }
+
+}
+.line{
+    color: #EF5B70;
+    height: 3px;
+    border: none;
+    background-color: #EF5B70;
+    width: 63px;
+}
+
 @media(width:768px){
     .footer{
         &__info{
@@ -581,45 +733,7 @@ a{
     }
     }
     
-    .bottom{
-        gap: 305px;
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-    
-    .catalog{
-        display: flex;
-        background-color: #F8F3F4;
-        align-items: center;
-        height: 150px;
-        justify-content: space-between;
-        padding-left: 230px;
-        padding-right: 230px;
-        
-        &__header{
-            color: $colorSite;
-            font-family: Lato;
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 28.8px;
-            text-align: left;
 
-        }
-       
-        &__chapter_text{
-            text-decoration: none;
-            color: #636363;
-            font-family: Lato;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 16.8px;
-            text-align: left;
-
-        }
-        &__now{
-            color: $colorSite;
-        }
-    }
 
 
 @media(width: 320px){
