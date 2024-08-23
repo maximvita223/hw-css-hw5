@@ -461,6 +461,7 @@ a{
         align-items: center;
     }
     &[open]{
+        transition: 0.5s;
         background: #FFFFFF;
         box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
         & .filter__summary{
