@@ -728,8 +728,10 @@ a {
 .cart__button_checkout:hover {
   background-color: #FFFFFF;
   color: #F16D7F;
+  transition: 1s;
 }
 .cart__button:hover {
+  transition: 1s;
   color: white;
   background-color: #F16D7F;
   fill: white;

@@ -804,6 +804,7 @@ a{
             &:hover{
                 background-color: #FFFFFF;
                 color: $colorSite;
+                transition: 1s;
                 
             }
         }
@@ -812,6 +813,7 @@ a{
     }
 
     &__button:hover{
+        transition: 1s;
         color: white;
         background-color: $colorSite;
         fill: white;
