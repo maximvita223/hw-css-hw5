@@ -3,11 +3,13 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Lato;
 }
 
 a{
     text-decoration: none;
 }
+
 .center{
     padding-left: calc(50% - 540px);
     padding-right: calc(50% - 540px);
@@ -65,7 +67,7 @@ a{
         margin-top: 75%;
     }
     &__title{
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 48px;
         font-weight: 900;
         line-height: 57.6px;
@@ -73,7 +75,7 @@ a{
 
     }
     &__heading{
-        font-family: Lato;
+        // font-family: Lato;
         font-style: normal;
         font-weight: 700;
         font-size: 32px;
@@ -112,21 +114,21 @@ a{
         width: 100%;
     }
     &__text{
-        font-family: Lato;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.2px;
-    text-align: center;
-    color: white;
+        // font-family: Lato;
+        font-weight: 400;
+        line-height: 19.2px;
+        text-align: center;
+        color: white;
+        font-size: 16px;
 
     }
     &__heading{
-        font-family: Lato;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28.8px;
-    text-align: center;
-    color: $colorSite;
+        // font-family: Lato;
+        font-weight: 700;
+        line-height: 28.8px;
+        text-align: center;
+        color: $colorSite;
+        font-size: 24px;
 
     }
     
@@ -188,32 +190,32 @@ a{
         align-items: center;
         justify-content: center;
         gap: 23px;
+        border-style: solid;
     }
     &__button_browse_all:hover{
         color: white;
         background-color: $colorSite;
-        fill: white;
     }
     &__card{
         background-color: #F8F8F8;
         position: relative;
     }
     &__head2{
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 13px;
         font-weight: 400;
         line-height: 15.6px;
         text-align: left;
     }
     &__head_text{
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 30px;
         font-weight: 400;
         line-height: 36px;
         text-align: left;
     }
     &__text{
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 14px;
         font-weight: 400;
         line-height: 16.8px;
@@ -222,7 +224,7 @@ a{
 
     }
     &__price{
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 16px;
         font-weight: 400;
         line-height: 19.2px;
@@ -260,7 +262,7 @@ a{
     }
     &__header{
         color:#FBFBFB;
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 19.96px;
         font-weight: 400;
         line-height: 23.95px;
@@ -268,7 +270,7 @@ a{
     }
     &__text{
         color: #FBFBFB;
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 13.97px;
         font-weight: 200;
         line-height: 16.77px;
@@ -317,7 +319,7 @@ a{
     }
 
     &__text{
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 20px;
         font-weight: 400;
         line-height: 24px;
@@ -336,14 +338,14 @@ a{
 
     
     &__h2{
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 24px;
         font-weight: 700;
         line-height: 40.13px;
 
     }
     &__h3{
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 18px;
         font-weight: 400;
         line-height: 30.1px;
@@ -388,7 +390,7 @@ a{
         }
         &__info{
             color: white;
-            font-family: Lato;
+            // font-family: Lato;
             font-size: 16px;
             font-weight: 400;
             line-height: 19.2px;
@@ -493,7 +495,7 @@ a{
         display: flex;
         align-items: center;
         gap: 10px;
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 14px;
         font-weight: 400;
         line-height: 16.8px;
@@ -534,7 +536,7 @@ a{
     }
     &_text{
         text-decoration: none;
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 16px;
         font-weight: 300;
         line-height: 19.2px;
@@ -564,7 +566,7 @@ a{
     
     &__header{
         color: $colorSite;
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 24px;
         font-weight: 400;
         line-height: 28.8px;
@@ -575,16 +577,36 @@ a{
     &__chapter_text{
         text-decoration: none;
         color: #636363;
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 14px;
         font-weight: 400;
         line-height: 16.8px;
         text-align: left;
-
+        &:hover{
+            color: $colorSite;
+        }
     }
-    &__now{
+    &__chapter{
+        display: flex;
+    }
+    &__box:last-of-type .catalog__chapter_text{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
         color: $colorSite;
     }
+    &__box:not(:last-child)::after{
+        content: "/";
+        padding-left: 8px;
+        padding-right: 8px;
+        color: #636363;
+        // font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.8px;
+        text-align: left;
+    }
+    
 }
 .product{
     &__photo{
@@ -631,7 +653,7 @@ a{
         padding-top: 60px;
     }
     &__h3{
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 14px;
         font-weight: 400;
         line-height: 16.8px;
@@ -644,7 +666,7 @@ a{
 
     }
     &__h2{
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 18px;
         font-weight: 400;
         line-height: 21.6px;
@@ -652,7 +674,7 @@ a{
 
     }
     &__h1{
-        font-family: Lato;
+        // font-family: Lato;
         font-size: 24px;
         font-weight: 400;
         line-height: 28.8px;
@@ -679,6 +701,202 @@ a{
     background-color: #EF5B70;
     width: 63px;
 }
+.cart{
+    min-height: 1000px;
+    display: flex;
+    padding-left: 230px;
+    padding-top: 96px;
+    gap: 128px;
+    &__product{
+        display: flex;
+        -webkit-box-shadow: 10px 10px 22px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 10px 10px 22px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 10px 10px 22px 0px rgba(34, 60, 80, 0.2);
+        &_heding{
+            // font-family: Lato;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 28.8px;
+            text-align: left;
+
+        }
+    }
+    &__count{
+        max-width: 44px;
+        margin-left: 24px;
+        border-color: #EAEAEA;
+        border-style: solid;
+        border-width: 1px;
+        // font-family: Lato;
+        font-weight: 400;
+        line-height: 21.6px;
+        text-align: center;
+        font-size: 18px;
+        color: #656565;
+    
+    }
+    &__settings{
+        display: flex;
+        flex-direction: column;
+        gap: 42px;
+    }
+    &__setting{
+        // font-family: Lato;
+        font-weight: 400;
+        font-size: 22px;
+        text-align: left;
+        line-height: 26.4px;
+
+    }
+    &__products{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__delete{
+    margin-top: 28px;
+    margin-right: 22px;
+    }
+    
+    &__settings{
+        margin: 22px 57px 62px 31px;
+    }
+    &__buttons{
+        display: flex;
+        gap: 192px;
+    }
+    &__button{
+        width: 230px;
+        height: 50px;
+        color: #4A4A4A;
+        background-color: white;
+        border-color: #A4A4A4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-style: solid;
+        // font-family: Lato;
+        font-weight: 400;
+        line-height: 16.8px;
+        font-size: 14px;
+        border-width: 1px;
+
+        &_shipping{
+            width: 101px;
+            height: 35px;
+            line-height: 13.2px;
+            font-size: 11px;
+            
+        }
+        
+        &_checkout{
+            width: 273px;
+            height: 50px;
+            background-color: $colorSite;
+            color: #FFFFFF;
+            border-style: solid;
+            border-color: $colorSite;
+
+            font-weight: 400;
+            line-height: 19.2px;
+            font-size: 16px;
+
+            &:hover{
+                background-color: #FFFFFF;
+                color: $colorSite;
+                
+            }
+        }
+        
+
+    }
+
+    &__button:hover{
+        color: white;
+        background-color: $colorSite;
+        fill: white;
+    }
+    &__shipping{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &_heding{
+            // font-family: Lato;
+            font-weight: 400;
+            line-height: 19.2px;
+            text-align: left;
+            font-size: 16px;
+
+        }
+    }
+    &__adress{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__data{
+        width: 360px;
+        height: 45px;
+        // font-family: Lato;
+        font-size: 13px;
+        line-height: 15.6px;
+        text-align: left;
+        font-weight: 400;
+        padding-left: 17px;
+    }
+    &__city{
+        color: #B1B1B1;
+        &::placeholder{
+            color: #B1B1B1;
+            opacity: 1;
+        }
+    }
+    &__total{
+        background-color: #F5F3F3;
+        width: 360px;
+        height: 214px;
+        padding-top: 39px;
+        padding-left: 43px;
+        padding-right: 42px;
+        padding-bottom: 44px;
+        &_price{
+            display: flex;
+            flex-direction: column; 
+        }
+        &_head3{
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+        &_head2{
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+        &_h3{
+            font-family: Lato;
+            font-weight: 400;
+            line-height: 13.2px;
+            text-align: left;
+            font-size: 11px;
+        }
+        &_h2{
+            font-family: Lato;
+            font-weight: 400;
+            line-height: 19.2px;
+            text-align: left;
+            font-size: 16px;
+            &_price{
+                color: $colorSite;
+            }
+        }
+        &_line{
+            border-color: #b3b3bf;
+        }
+    }
+    
+}
+
 
 @media(width:768px){
     .footer{
