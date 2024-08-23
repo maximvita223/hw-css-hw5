@@ -155,11 +155,13 @@ a{
     }
     &__card{
         &:hover .content__add{
+            transition: 0.5s;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
         }
         &:hover .content__img{
+            transition: 0.5s;
             filter: brightness(0.5);
         }
     }
@@ -193,6 +195,7 @@ a{
         border-style: solid;
     }
     &__button_browse_all:hover{
+        transition: 0.5s;
         color: white;
         background-color: $colorSite;
     }
@@ -408,6 +411,7 @@ a{
         &__social:hover{
             color: white;
             background-color: $colorSite;
+            transition: 0.5s;
         }
         
         &__img{

@@ -140,11 +140,13 @@ a {
   padding-bottom: 50px;
 }
 .content__card:hover .content__add {
+  transition: 0.5s;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 .content__card:hover .content__img {
+  transition: 0.5s;
   filter: brightness(0.5);
 }
 .content__img {
@@ -177,6 +179,7 @@ a {
   border-style: solid;
 }
 .content__button_browse_all:hover {
+  transition: 0.5s;
   color: white;
   background-color: #F16D7F;
 }
@@ -367,6 +370,7 @@ a {
 .bottom__social:hover {
   color: white;
   background-color: #F16D7F;
+  transition: 0.5s;
 }
 .bottom__img {
   max-width: 50%;
