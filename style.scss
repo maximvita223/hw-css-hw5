@@ -717,13 +717,14 @@ a{
         -webkit-box-shadow: 10px 10px 22px 0px rgba(34, 60, 80, 0.2);
         -moz-box-shadow: 10px 10px 22px 0px rgba(34, 60, 80, 0.2);
         box-shadow: 10px 10px 22px 0px rgba(34, 60, 80, 0.2);
+        max-height: 300px;
         &_heding{
             // font-family: Lato;
             font-size: 24px;
             font-weight: 400;
             line-height: 28.8px;
             text-align: left;
-
+            max-width: 200px;
         }
     }
     &__count{
@@ -764,7 +765,7 @@ a{
     }
     
     &__settings{
-        margin: 22px 57px 62px 31px;
+        margin: 22px 120px 62px 31px;
     }
     &__buttons{
         display: flex;
@@ -809,7 +810,7 @@ a{
             &:hover{
                 background-color: #FFFFFF;
                 color: $colorSite;
-                transition: 1s;
+                transition: 0.5s;
                 
             }
         }
@@ -818,7 +819,7 @@ a{
     }
 
     &__button:hover{
-        transition: 1s;
+        transition: 0.5s;
         color: white;
         background-color: $colorSite;
         fill: white;
@@ -826,7 +827,8 @@ a{
     &__shipping{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 57px;
+        margin-top: 7px;
         &_heding{
             // font-family: Lato;
             font-weight: 400;

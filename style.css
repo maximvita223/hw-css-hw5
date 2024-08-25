@@ -652,12 +652,14 @@ a {
 .cart__product {
   display: flex;
   box-shadow: 10px 10px 22px 0px rgba(34, 60, 80, 0.2);
+  max-height: 300px;
 }
 .cart__product_heding {
   font-size: 24px;
   font-weight: 400;
   line-height: 28.8px;
   text-align: left;
+  max-width: 200px;
 }
 .cart__count {
   max-width: 44px;
@@ -692,7 +694,7 @@ a {
   margin-right: 22px;
 }
 .cart__settings {
-  margin: 22px 57px 62px 31px;
+  margin: 22px 120px 62px 31px;
 }
 .cart__buttons {
   display: flex;
@@ -733,10 +735,10 @@ a {
 .cart__button_checkout:hover {
   background-color: #FFFFFF;
   color: #F16D7F;
-  transition: 1s;
+  transition: 0.5s;
 }
 .cart__button:hover {
-  transition: 1s;
+  transition: 0.5s;
   color: white;
   background-color: #F16D7F;
   fill: white;
@@ -744,7 +746,8 @@ a {
 .cart__shipping {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 57px;
+  margin-top: 7px;
 }
 .cart__shipping_heding {
   font-weight: 400;
