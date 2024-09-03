@@ -905,8 +905,121 @@ a{
     }
     
 }
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 360px;
+    // margin-left: 230px;
+    // margin-top: 64px;
+    // margin-bottom: 96px;
+    &__gender{
+        display: flex;
+    }
+    &__text{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.6px;
+    text-align: left;
+    color: #B1B1B1;
+    }
+    &__button{
+        width: 167px;
+        height: 50px;
+        background-color: $colorSite;
+        color: white;
+        fill: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        border-color: $colorSite;
+        border-style: solid;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.8px;
 
+        &:hover path {
+            fill: $colorSite;
+            transition: 0.5s;
+        }
+        &:hover{
+            color: $colorSite;
+            background-color: white;
+            fill: $colorSite;
+            border-color: $colorSite;
+            transition: 0.5s;
+        }
+        
+    }
+}
+.registration{
+    display: flex;
+    padding: 64px 175px 96px 230px;
+    gap: 128px;
+}
+.layout{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &_text{
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28.8px;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    ul > li{
+        background: url(img/filter/galochka.svg) no-repeat 0 50%;
+        padding-left: 40px;
+        position: relative;
+        margin: 10px;
+    }
+    // ul > li:before{
+    //     background: url(img/filter/galochka.svg) no-repeat 0 50%;
+    //     position: absolute; top: 0; left: 0;
+    //     color: black;
+    // }
 
+}
+.radioItem {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+    &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+  }
+  .radioButton {
+    appearance: none;
+    position: relative;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #a4a4a4;
+    border-radius: 9999px;
+    cursor: pointer;
+    &:checked {
+        background-color: #ffffff;
+      }
+    &:checked::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 11px;
+        height: 11px;
+        margin: auto;
+        border-radius: 9999px;
+        background-color: #f16d7f;
+      }
+  }
+  
 @media(width:768px){
     .footer{
         &__info{
