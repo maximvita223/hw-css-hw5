@@ -696,6 +696,14 @@ a{
     }
     &__head{
         padding-bottom: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    &_hr{
+        color: #EAEAEA; 
+        size: 3px;
     }
 
 }
