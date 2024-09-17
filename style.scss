@@ -421,7 +421,7 @@ a{
 }
 
 
-    .filter{
+.filter{
     width: 100%;
     padding: 13px 16px 16px;
     box-sizing: border-box;
@@ -489,7 +489,7 @@ a{
     }
     
     }
-    .sort{
+.sort{
     display: flex;
     gap: 28px;
     align-items: center;
@@ -617,10 +617,10 @@ a{
     &__photo{
         display: flex;
         background-color: #F7F7F7;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         position: relative;
-    margin-bottom: 665px;
+        margin-bottom: 665px;
         &__slide{
         background-color: #2A2A2A26;
         }
@@ -653,7 +653,7 @@ a{
         flex-direction: column;
         align-items: center;
         gap: 48px;
-        border-top: 2px solid black;
+        border-top: 2px solid #EAEAEA;
         width: 642px;
         padding-top: 60px;
     }
@@ -680,6 +680,7 @@ a{
     }
     &__h1{
         // font-family: Lato;
+        padding-bottom: 64px;
         font-size: 24px;
         font-weight: 400;
         line-height: 28.8px;
@@ -701,9 +702,16 @@ a{
         align-items: center;
         gap: 12px;
     }
-    &_hr{
-        color: #EAEAEA; 
-        size: 3px;
+
+    &__slide{
+        background-color: #2A2A2A26;
+        position: absolute;
+        &_right{
+            right: -0px;
+        }
+        &_left{
+            left: -1px;
+        }
     }
 
 }
@@ -821,6 +829,9 @@ a{
                 transition: 0.5s;
                 
             }
+        }
+        &__img{
+            height: 300px;
         }
         
 
@@ -1028,11 +1039,16 @@ a{
       }
   }
   
-@media(width:768px){
+@media(max-width:1024px){
+    .navigation{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
     .footer{
         &__info{
             flex-direction: column;
             gap: 108px;
+            padding: 0;
             
         }
     }
@@ -1042,6 +1058,8 @@ a{
         height: 614px;
         justify-content: center;
         background-size: cover;
+        align-items: center;
+        padding: 0;
         &__left{
             width: 360px;
         }
@@ -1078,14 +1096,91 @@ a{
             grid-template-columns: repeat(2, 3fr);
             gap: 16px;
         }
+        &__card_catalog:last-child {
+            content-visibility: hidden;
+        }
     }
+    .catalog{
+        padding-left: 16px;
+        padding-right: 16px;
+        &__one{
+            padding-right: 0;
+        }
     }
-    
+    .product{
+        &__info{
+            margin-left: 0; 
+            margin-right:0; 
+            top: 0;
+            position:relative;
+
+        }
+        &__img{
+            width: 100%;
+        }
+        &__photo{
+            margin-bottom: 0;
+        }
+        &__text{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        &__parametr{
+            width: 80%;
+        }
+    }
+    .bottom{
+        align-items: center;
+        gap: 20px;
+    }
+    .cart{
+        flex-direction: column;
+        min-height: 0;
+        padding-left: 0;
+        align-items: center;
+        padding-bottom: 128px;
+        // width: 734px;
+        &__product{
+            width: 734px;
+            max-height: 306px;
+        }
+        &__shipping{
+            flex-direction: row;
+            gap: 15px;
+        }
+        &__total{
+            margin-top: 46px;
+        }
+        &__delete{
+            margin-left: 90px;
+            margin-right: 0;
+        }
+        &__buttons{
+            justify-content: space-around;
+            gap: 0;
+        }
+        &__img{
+            height: 306px;
+        }
+    }
+    .registration{
+        padding: 40px 16px 96px 16px;
+        gap: 22px;
+
+    }
+    .layout{
+        &_text{
+            font-size: 16px;
+        }
+    }
+}
 
 
 
-@media(width: 320px){
+@media(max-width: 426px){
     .navigation{
+        padding-left: 16px;
+        padding-right: 16px;
         &__img1{
             display: none;
         }
@@ -1117,7 +1212,6 @@ a{
         &__big_img{
             max-width: 100%;
             object-fit: cover;
-            width: 320px;
             height: 111px;
         }
     }
@@ -1137,10 +1231,10 @@ a{
             min-width: 212px;
             min-height: 48px;
         }
-        &__add{
-            top: 155px;
-            left: 90px;
-        }
+        // &__add{
+        //     top: 155px;
+        //     left: 90px;
+        // }
     }
     .footer{
         &__info{
@@ -1155,6 +1249,7 @@ a{
         }
     }
     .feedback{
+        align-items: center;
         flex-direction: column;
         gap: 48px;
         height: 614px;
@@ -1195,5 +1290,104 @@ a{
         gap: 40px;
         padding-bottom: 8px;
         justify-content: flex-start;
+    }
+    .catalog{
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-around;
+        &__one{
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .filter{
+        &-sort{
+            gap: 55px;
+        }
+        font-size: 0;
+        &__summary{
+            flex-direction: column;
+        }
+        &-box{
+            padding-left: 8px;
+            height: 25px;
+            width: 37px;
+            bottom: 17px;
+        }
+        &__img{
+            width: 37px;
+            height: 25px;
+        }
+    }
+    .sort{
+        &__summary{
+            font-size: 12px;
+            &_p{
+                font-size: 10px;
+            }
+        }
+    }
+    .product{
+        &__img{
+            width: 100%;
+        }
+        &__p{
+            width: 320px;
+    }
+    &__parametr{
+        width: auto;
+    }
+    &__text{
+        padding-left: 0; 
+         padding-right: 0;
+    }
+}
+    .cart{
+        &__products{
+            max-width: 358px;
+        }
+        // max-width: 358px;
+        &__setting{
+            font-size: 14px;
+            width: 143px;
+            margin: 0;
+            line-height: 16.8px;
+        }
+        &__settings{
+            gap: 25px;
+            margin-left: 17px;
+            margin-bottom: 37px;
+            margin-top: 13px;
+            margin-right: 0;
+        }
+        &__product{
+            max-height: 188px;
+            width: 358px;
+            &_heding{
+                font-size: 16px;
+                margin-bottom: 0;
+                width: 140px;
+                line-height: 19.2px
+            }
+        }
+        &__img{
+            height: 188px;
+        }
+        &__delete{
+            margin: 0;
+            margin-top: 8px;
+            margin-right: 10px;
+        }
+        &__button{
+            width: 175px;
+            font-size: 12px;
+        }
+        &__shipping{
+            flex-direction: column;
+        }
+    }
+    .registration{
+        flex-direction: column;
     }
 }
