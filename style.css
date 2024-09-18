@@ -1211,6 +1211,9 @@ a {
     width: 37px;
     height: 25px;
   }
+  .filter[open] {
+    width: 200px;
+  }
   .sort__summary {
     font-size: 12px;
   }
@@ -1270,6 +1273,9 @@ a {
   }
   .cart__shipping {
     flex-direction: column;
+  }
+  .cart__data {
+    width: 290px;
   }
   .registration {
     flex-direction: column;

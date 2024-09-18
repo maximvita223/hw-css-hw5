@@ -1302,6 +1302,7 @@ a{
         }
     }
     .filter{
+       
         &-sort{
             gap: 55px;
         }
@@ -1319,6 +1320,9 @@ a{
             width: 37px;
             height: 25px;
         }
+    }
+    .filter[open]{
+        width: 200px;
     }
     .sort{
         &__summary{
@@ -1385,6 +1389,9 @@ a{
         }
         &__shipping{
             flex-direction: column;
+        }
+        &__data{
+            width: 290px;
         }
     }
     .registration{
