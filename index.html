@@ -150,60 +150,6 @@
             <p class="content__text content__text_hp">Shop for items based on what we featured in this week</p>
         </div>
         <div class="content__block">
-            <div class="content__card">
-                <img class="content__img" src="img/product/1.svg" alt="man">
-                <div class="content__info">
-                    <h2 class="content__head2">ELLERY X M'O CAPSULE</h2>
-                    <p class="content__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                    <h3 class="content__price">$52.00</h3>
-                </div>
-                <a class="content__add" href="#"><img src="img/product/effect-add.svg" alt="add"> Add to card</a>
-            </div>
-            <div class="content__card">
-                <img class="content__img" src="img/product/2.svg" alt="man">
-                <div class="content__info">
-                    <h2 class="content__head2">ELLERY X M'O CAPSULE</h2>
-                    <p class="content__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                    <h3 class="content__price">$52.00</h3>
-                    <a class="content__add" href="#"><img src="img/product/effect-add.svg" alt="add"> Add to card</a>
-                </div>
-            </div>
-            <div class="content__card">
-                <img class="content__img" src="img/product/3.svg" alt="man">
-                <div class="content__info">
-                    <h2 class="content__head2">ELLERY X M'O CAPSULE</h2>
-                    <p class="content__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                    <h3 class="content__price">$52.00</h3> 
-            </div>
-            <a class="content__add" href="#"><img src="img/product/effect-add.svg" alt="add"> Add to card</a>
-            </div>
-            <div class="content__card">
-                <img class="content__img" src="img/product/4.svg" alt="man">
-                <div class="content__info">
-                    <h2 class="content__head2">ELLERY X M'O CAPSULE</h2>
-                    <p class="content__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                    <h3 class="content__price">$52.00</h3>
-            </div>
-            <a class="content__add" href="#"><img src="img/product/effect-add.svg" alt="add"> Add to card</a>
-            </div>
-            <div class="content__card">
-                <img class="content__img" src="img/product/5.svg" alt="man">
-                <div class="content__info">
-                    <h2 class="content__head2">ELLERY X M'O CAPSULE</h2>
-                    <p class="content__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                    <h3 class="content__price">$52.00</h3>
-            </div>
-            <a class="content__add" href="#"><img src="img/product/effect-add.svg" alt="add"> Add to card</a>
-            </div>
-            <div class="content__card">
-                <img class="content__img" src="img/product/6.svg" alt="man">
-                <div class="content__info">
-                    <h2 class="content__head2">ELLERY X M'O CAPSULE</h2>
-                    <p class="content__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                    <h3 class="content__price">$52.00</h3>
-            </div>
-            <a class="content__add" href="#"><img src="img/product/effect-add.svg" alt="add"> Add to card</a>
-        </div>
         </div>
     <div class="content__button">
         <button class="content__button_browse_all" style="font-size: 16px;">Browse All Product</button>
@@ -279,7 +225,58 @@
             </div>
         </div>
     </footer>
+    <script src="data.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        const contentElementBlock = document.querySelector('.content__block');
+        const dataProd = JSON.parse(dataProduct);
+        dataProd.forEach(element => {
+            const newCardEl = document.createElement('div');
+            newCardEl.classList.add("content__card");
+
+            const imgEl = document.createElement('img');
+            imgEl.classList.add("content__img");
+            imgEl.setAttribute("src", element.url);
+
+            const infoEl = document.createElement('div');
+            infoEl.classList.add("content__info");
+
+            const headEl = document.createElement('h2');
+            headEl.classList.add("content__head2");
+            headEl.textContent = element.head;
+
+            const textEl = document.createElement('p');
+            textEl.classList.add("content__text");
+            textEl.textContent = element.text;
+
+            const priceEl = document.createElement('h3');
+            priceEl.classList.add("content__price");
+            priceEl.textContent = element.price;
+
+            const buttonEl = document.createElement("a");
+            buttonEl.classList.add("content__add");
+            buttonEl.href = "#"
+
+            const buttonTextEl = document.createElement("p");
+            buttonTextEl.classList.add("content__add_text");
+            buttonTextEl.textContent = "Add to card"
+
+            const buttonImgEl = document.createElement("img");
+            buttonImgEl.src = "img/product/effect-add.svg";
+
+
+            contentElementBlock.appendChild(newCardEl);
+            newCardEl.appendChild(imgEl);
+            newCardEl.appendChild(infoEl);
+            infoEl.appendChild(headEl);
+            infoEl.appendChild(textEl);
+            infoEl.appendChild(priceEl);
+            newCardEl.appendChild(buttonEl);
+            buttonEl.appendChild(buttonImgEl);
+            buttonEl.appendChild(buttonTextEl);
+           
+        });
+    </script>
 </body>
 </html>
 

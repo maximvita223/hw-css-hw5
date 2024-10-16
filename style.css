@@ -186,6 +186,8 @@ a {
 .content__card {
   background-color: #F8F8F8;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .content__head2 {
   font-size: 13px;
@@ -226,6 +228,9 @@ a {
   display: none;
   color: #FFFFFF;
   text-decoration: none;
+}
+.content__add_text {
+  margin-bottom: 0;
 }
 
 .footer {
